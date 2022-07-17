@@ -21,5 +21,5 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
 
       - run: |
-          docker build . -t mycontainerreg.azurecr.io/appdb:${{ github.sha }}
+          docker build  -t mycontainerreg.azurecr.io/appdb:${{ github.sha }}
           docker push mycontainerregg.azurecr.io/appdb:${{ github.sha }}
